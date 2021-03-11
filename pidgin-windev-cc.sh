@@ -295,4 +295,5 @@ fi
 
 # Configuration & DLLs
 cp "${devroot}/pidgin/Makefile.mingw" "${devroot}/pidgin/Makefile"
+[ ! -d "${devroot}/pidgin/win32-install-dir" ] && mkdir "${devroot}/pidgin/win32-install-dir"
 cp "/mingw32/bin/*.dll" "${devroot}/pidgin/win32-install-dir"
