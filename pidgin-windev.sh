@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-version="2021.03.10"
-pidgin_version="2.14.1"
+version="2022.03.27"
+pidgin_version="2.14.8"
 devroot="$1"
 path="$2"
 
@@ -10,6 +10,7 @@ if [[ "$1" = -* || -z "$devroot" || ( -n "$path" && "$path" != --path ) ]]; then
     Target Pidgin version ${pidgin_version}
     Copyright 2012-2016 Renato Silva
     Copyright 2021 Jeremiah Blanchard
+    Updated 2022 FurtiveFox
     Licensed under BSD
 
     This Cygwin/MSYS script sets up a Windows build environment for Pidgin in
