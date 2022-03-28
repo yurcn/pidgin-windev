@@ -119,6 +119,7 @@ extract() {
         lzma)    tar --lzma -xf       "$compressed"  --directory "$directory" ;;
         bzip2)   tar -xjf             "$compressed"  --directory "$directory" "${files[@]}" ;;
         gzip)    tar -xzf             "$compressed"  --directory "$directory" ;;
+        xz)      tar -xf              "$compressed"  --directory "$directory" ;;
         zip)     unzip -qo${files:+j} "$compressed" "${files[@]}" -d "$directory" ;;
     esac || exit
 }
@@ -231,6 +232,10 @@ echo
 
 # Extract GCC
 step "Extracting MinGW GCC"
+for tarball in "${cache}/${mingw}/"*".tar.xz"; do
+    extract xz "${win32}/${mingw}" "$tarball"
+done
+
 for tarball in "${cache}/${mingw}/"*".tar.lzma"; do
     extract lzma "${win32}/${mingw}" "$tarball"
 done
