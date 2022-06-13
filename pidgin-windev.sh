@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 version="2022.03.27"
-pidgin_version="2.14.8"
+pidgin_version="2.14.9"
 devroot="$1"
 path="$2"
 
@@ -84,7 +84,7 @@ perl="strawberry-perl-$perl_version-32bit"
 perl_dir="strawberry-perl-${perl_version%.*}"
 pidgin_base_url="http://developer.pidgin.im/static/win32"
 gnome_base_url="http://ftp.gnome.org/pub/gnome/binaries"
-mingw_base_url="http://sourceforge.net/projects/mingw/files/MinGW/Base"
+mingw_base_url="https://sourceforge.net/projects/mingw/files/MinGW/Base"
 mingw_gcc44_url="$mingw_base_url/gcc/Version4/Previous%20Release%20gcc-4.4.0"
 mingw_pthreads_url="$mingw_base_url/pthreads-w32/pthreads-w32-2.9.0-pre-20110507-2"
 
@@ -180,7 +180,7 @@ echo
 
 # Download GCC
 step "Downloading specific MinGW GCC"
-download "${cache}/${mingw}" "${mingw_base_url}/binutils/binutils-2.24/binutils-2.24-1-mingw32-bin.tar.xz/download"
+download "${cache}/${mingw}" "${mingw_base_url}/binutils/binutils-2.28/binutils-2.28-1-mingw32-bin.tar.xz/download"
 download "${cache}/${mingw}" "${mingw_base_url}/gcc/Version4/gcc-4.7.2-1/gcc-core-4.7.2-1-mingw32-bin.tar.lzma/download"
 download "${cache}/${mingw}" "${mingw_base_url}/gcc/Version4/gcc-4.7.2-1/${gcc_source}.tar.lzma/download"
 download "${cache}/${mingw}" "${mingw_base_url}/gcc/Version4/gcc-4.7.2-1/libgcc-4.7.2-1-mingw32-dll-1.tar.lzma/download"
